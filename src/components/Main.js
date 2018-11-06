@@ -109,8 +109,9 @@ class ControllerUnit extends React.Component {
   }
 }
 
-// 控制组件,初始化所有位置和角度，初始化信息位置组件
+// 控制组件,初始化所有位置和角度，初始化信息位置组件,大管家
 class AppComponent extends React.Component {
+  //定义范围，钩子函数，渲染的时候自动调用
   constructor(props) {
     super(props);
     // 定义范围
@@ -177,9 +178,8 @@ class AppComponent extends React.Component {
     let vPosRangeTopY = vPosRange.topY;
     let vPosRangeX = vPosRange.x;
 
-    let imgsArrangeTopArr = []
+    let imgsArrangeTopArr = [];
     let topImgNum = Math.floor(Math.random() * 2); //上侧区域去1个或者不取
-    // console.log('topImgNum:', topImgNum);
     let topImgSpliceIndex = 0;
 
     let imgsArrangeCenterArr = imgsArrangeArr.splice(centerIndex, 1);
@@ -207,7 +207,6 @@ class AppComponent extends React.Component {
         rotate: get30DegRandom(),
         isCenter: false
       }
-      // console.log('%c:::imgsArrangeTopArr', 'background:red;font-size:30px', index, imgsArrangeTopArr[index])
     })
 
     //布局左右两侧的图片
